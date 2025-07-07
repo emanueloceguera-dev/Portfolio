@@ -1,3 +1,7 @@
+/* 
+    Global Styles 
+    Set the default font, background color, text color, and remove default margin/padding
+*/
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +10,10 @@ body {
     color: #333;
 }
 
+/* 
+    Header Styles 
+    Creates a dark top banner with centered white text
+*/
 header {
     background-color: #1f2937;
     color: white;
@@ -13,6 +21,10 @@ header {
     text-align: center;
 }
 
+/* 
+    Main Content Container 
+    Adds spacing, background, and shadow for a card-like layout
+*/
 main {
     max-width: 900px;
     margin: 40px auto;
@@ -22,10 +34,15 @@ main {
     border-radius: 10px;
 }
 
+/* Headings styling */
 h1, h2 {
     margin-top: 0;
 }
 
+/* 
+    Project List 
+    Removes bullets and adds spacing between items
+*/
 ul {
     list-style: none;
     padding: 0;
@@ -36,6 +53,10 @@ li {
     border-bottom: 1px solid #ddd;
 }
 
+/* 
+    Link Styling 
+    Adds blue color and hover effect
+*/
 a {
     color: #1e40af;
     text-decoration: none;
@@ -45,6 +66,10 @@ a:hover {
     text-decoration: underline;
 }
 
+/* 
+    Footer 
+    Light gray text, centered, small size
+*/
 footer {
     text-align: center;
     padding: 20px;
