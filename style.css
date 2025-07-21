@@ -1,78 +1,76 @@
-/* 
-    Global Styles 
-    Set the default font, background color, text color, and remove default margin/padding
-*/
+/* Reset default padding/margin */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background and font */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  background-color: #1e1e2f;
+  color: #ffffff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+  line-height: 1.6;
 }
 
-/* 
-    Header Styles 
-    Creates a dark top banner with centered white text
-*/
+/* Header and nav styles */
 header {
-    background-color: #1f2937;
-    color: white;
-    padding: 30px;
-    text-align: center;
+  background-color: #121225;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
 }
 
-/* 
-    Main Content Container 
-    Adds spacing, background, and shadow for a card-like layout
-*/
-main {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
-    background: white;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-radius: 10px;
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-/* Headings styling */
-h1, h2 {
-    margin-top: 0;
+.navbar h1 {
+  font-size: 24px;
+  color: #00bfff;
 }
 
-/* 
-    Project List 
-    Removes bullets and adds spacing between items
-*/
-ul {
-    list-style: none;
-    padding: 0;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
 }
 
-li {
-    padding: 10px 0;
-    border-bottom: 1px solid #ddd;
+.navbar li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
 }
 
-/* 
-    Link Styling 
-    Adds blue color and hover effect
-*/
-a {
-    color: #1e40af;
-    text-decoration: none;
+.navbar li a:hover {
+  background-color: #00bfff;
+  color: #1e1e2f;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Main content spacing */
+main, section {
+  margin: 20px auto;
+  max-width: 800px;
 }
 
-/* 
-    Footer 
-    Light gray text, centered, small size
-*/
-footer {
-    text-align: center;
-    padding: 20px;
-    color: #666;
-    font-size: 0.9em;
+/* Gallery image sizing */
+figure img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border: 2px solid #00bfff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  margin-bottom: 10px;
 }
+figure {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
