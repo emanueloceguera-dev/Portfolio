@@ -5,7 +5,7 @@
   box-sizing: border-box;
 }
 
-/* Body Styles */
+/* Body and layout */
 body {
   background-color: #0f0f0f;
   color: #e0e0e0;
@@ -15,14 +15,14 @@ body {
   padding: 40px 20px;
 }
 
-/* Centered layout */
+/* Page wrapper */
 main, header {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
 }
 
-/* Header & Nav */
+/* Header and Nav */
 header {
   padding-bottom: 30px;
 }
@@ -67,7 +67,23 @@ h2 {
   padding-bottom: 10px;
 }
 
-/* Forms */
+/* Portrait Image Styling */
+.portrait-container {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
+
+.portrait-container img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #00e0ff;
+  box-shadow: 0 0 10px rgba(0, 224, 255, 0.3);
+}
+
+/* Form styling */
 form {
   background-color: #1a1a1a;
   padding: 25px;
@@ -99,7 +115,7 @@ input[type="button"]:hover {
   background-color: #00b3cc;
 }
 
-/* Gallery */
+/* Gallery styling */
 figure {
   text-align: center;
   margin-bottom: 40px;
@@ -114,7 +130,7 @@ figure img {
   border: 2px solid #222;
 }
 
-/* Embedded videos */
+/* Video iframe styling */
 iframe {
   display: block;
   margin: 0 auto 30px auto;
@@ -122,7 +138,12 @@ iframe {
   max-width: 100%;
 }
 
-/* Links */
+/* Lists and links */
+ul {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
 a {
   color: #00e0ff;
   text-decoration: none;
@@ -131,15 +152,4 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.portrait-container {
-  text-align: center;
-  margin: 30px 0;
-}
 
-.portrait-container img {
-  width: 150px;
-  height: auto;
-  border-radius: 50%;
-  border: 2px solid #00e0ff;
-  box-shadow: 0 0 10px rgba(0, 224, 255, 0.3);
-}
