@@ -11,28 +11,40 @@
   </nav>
 </header>
 
-<h2>Contact & Order Form</h2>
-<form id="orderForm">
-  <label for="name">Name:</label>
-  <input type="text" id="name" required><br>
+<main>
+  <h2>Contact Me</h2>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" required><br>
+  <form id="contactForm">
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" required>
 
-  <label for="quantity">How many candles? ($5 each)</label>
-  <input type="number" id="quantity" min="1" required><br>
+    <label for="email">Your Email:</label>
+    <input type="email" id="email" required>
 
-  <input type="button" value="Calculate Total" onclick="calculateTotal()">
+    <label for="message">Your Message:</label>
+    <textarea id="message" rows="5" required></textarea>
 
-  <p>Total: $<span id="totalCost">0.00</span></p>
-</form>
+    <label for="topics">How many topics would you like to talk about?</label>
+    <input type="number" id="topics" min="1" placeholder="e.g., 3">
+
+    <input type="button" value="Estimate My Response Time" onclick="estimateTime()">
+
+    <p><strong>Estimated Time to Read & Respond:</strong> <span id="estimate">0</span> minutes</p>
+  </form>
+</main>
 
 <script>
-  function calculateTotal() {
-    const quantity = document.getElementById('quantity').value;
-    const price = 5;
-    const total = quantity * price;
-    document.getElementById('totalCost').textContent = total.toFixed(2);
+  function estimateTime() {
+    const topics = parseInt(document.getElementById("topics").value);
+    const timePerTopic = 2;
+
+    if (!isNaN(topics) && topics > 0) {
+      const estimate = topics * timePerTopic;
+      document.getElementById("estimate").textContent = estimate;
+    } else {
+      document.getElementById("estimate").textContent = "0";
+    }
   }
 </script>
+
 
