@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <title>Contact</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
 
@@ -21,7 +22,7 @@
 </header>
 
 <main>
-  <h2>Send Me a Message</h2>
+  <h2>Get In Touch / Place an Order</h2>
 
   <form id="contactForm" onsubmit="event.preventDefault(); estimateTime(); calculateTotal();">
     <label for="name">Your Name:</label>
@@ -31,47 +32,25 @@
     <input type="email" id="email" required />
 
     <label for="message">Your Message:</label>
-    <textarea id="message" rows="5" required></textarea>
+    <textarea id="message" rows="4" required></textarea>
 
     <label for="topics">How many topics do you want to discuss?</label>
     <input type="number" id="topics" min="1" placeholder="e.g., 3" required />
+    <p><strong>Estimated Time to Respond:</strong> <span id="estimate">0</span> minutes</p>
 
-    <p><strong>Estimated Time to Read & Respond:</strong> <span id="estimate">0</span> minutes</p>
+    <hr />
 
-    <!-- New: Quantity input and cost -->
     <label for="quantity">Quantity of Services (e.g., consulting hours):</label>
-    <input type="number" id="quantity" min="1" placeholder="e.g., 4" required />
+    <input type="number" id="quantity" min="1" placeholder="e.g., 6" required />
 
+    <p><strong>Each service costs: $20</strong></p>
     <button type="submit">Calculate Total</button>
 
-    <p><strong>Order Summary:</strong></p>
-    <p id="totalSummary">Total: $0.00</p>
+    <p id="totalSummary"><strong>Total:</strong> $0.00</p>
   </form>
 </main>
 
-<script>
-  function estimateTime() {
-    const topics = parseInt(document.getElementById("topics").value);
-    const timePerTopic = 2;
-    const estimate = (!isNaN(topics) && topics > 0) ? topics * timePerTopic : 0;
-    document.getElementById("estimate").textContent = estimate;
-  }
-
-  function calculateTotal() {
-    const price = 20;
-    const quantity = parseInt(document.getElementById("quantity").value);
-    let total = price * quantity;
-    let discount = 0;
-
-    if (!isNaN(quantity) && quantity >= 5) {
-      discount = total * 0.10; // 10% discount
-      total -= discount;
-    }
-
-    document.getElementById("totalSummary").textContent = `Total: $${total.toFixed(2)} (Discount: $${discount.toFixed(2)})`;
-  }
-</script>
-
 </body>
 </html>
+
 
