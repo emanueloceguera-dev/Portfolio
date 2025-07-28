@@ -22,7 +22,7 @@ function estimateTime() {
   document.getElementById("estimate").textContent = estimate.toFixed(1);
 }
 
-// Optional: Smooth scroll for internal anchor links
+// Smooth scroll for internal anchor links
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
