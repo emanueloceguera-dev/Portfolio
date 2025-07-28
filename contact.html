@@ -9,7 +9,7 @@
 <body class="dark-theme">
   <aside class="sidebar" id="sidebar">
     <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
-  <img src="images/Self-Portrait.JPG" alt="Profile Picture" class="profile-pic" style="width: 120px; height: 120px; border-radius: 50%; display: block; margin: 1rem auto;" />
+    <img src="images/Self-Portrait.JPG" alt="Profile Picture" class="profile-pic" style="width: 120px; height: 120px; border-radius: 50%; display: block; margin: 1rem auto;" />
     <h2>Emanuel Oceguera</h2>
     <p>Software Engineer<br>Rome, NY</p>
     <nav>
@@ -22,11 +22,12 @@
       </ul>
     </nav>
     <div class="social">
-      <a href="#"><img src="images/github.png" alt="GitHub"></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+      <a href="https://github.com/emanueloceguera-dev" target="_blank"><img src="images/github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/emanuel-oceguera/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:eoceguera5@gmail.com"><img src="images/email.png" alt="Email"></a>
     </div>
   </aside>
+
   <main class="content">
     <h2>Contact & Service Request</h2>
     <form id="contactForm" onsubmit="event.preventDefault(); estimateTime(); calculateTotal();">
@@ -46,7 +47,12 @@
       <label for="quantity">Consulting Hours Requested:</label>
       <input type="number" id="quantity" min="1" required />
 
-      <p>Rate: $20/hour — Orders of 5+ hours receive a 10% discount</p>
+      <label>
+        <input type="checkbox" id="discount" />
+        I qualify for a 10% discount (5+ hours)
+      </label>
+
+      <p>Rate: $20/hour</p>
       <button type="submit">Calculate Total</button>
 
       <p id="totalSummary"><strong>Total:</strong> $0.00</p>
@@ -54,3 +60,4 @@
   </main>
 </body>
 </html>
+
