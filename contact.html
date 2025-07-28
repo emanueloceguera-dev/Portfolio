@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Emanuel Oceguera | Software Engineer</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
 <body class="dark-theme">
@@ -29,17 +28,29 @@
     </div>
   </aside>
   <main class="content">
-    <section class="hero">
-      <h1>Hello, I'm Emanuel.</h1>
-      <p>Veteran turned software engineer passionate about building clean, powerful solutions in Python, Java, and web technologies.</p>
-      <a href="contact.html" class="cta">Let's Connect</a>
-    </section>
-    <section class="about">
-      <h2>About Me</h2>
-      <p>I’m a U.S. Air Force veteran and a Computer Science student. I have over 6 years of experience leading maintenance teams, and now I’m applying my leadership and problem-solving skills to the world of software development. This site showcases my progress, learning, and interests in tech.</p>
-    </section>
+    <h2>Contact & Service Request</h2>
+    <form id="contactForm" onsubmit="event.preventDefault(); estimateTime(); calculateTotal();">
+      <label for="name">Your Name:</label>
+      <input type="text" id="name" required />
+
+      <label for="email">Your Email:</label>
+      <input type="email" id="email" required />
+
+      <label for="message">Your Message:</label>
+      <textarea id="message" rows="4" required></textarea>
+
+      <label for="topics">How many topics do you want to discuss?</label>
+      <input type="number" id="topics" min="1" required />
+      <p><strong>Estimated Time to Respond:</strong> <span id="estimate">0</span> minutes</p>
+
+      <label for="quantity">Consulting Hours Requested:</label>
+      <input type="number" id="quantity" min="1" required />
+
+      <p>Rate: $20/hour — Orders of 5+ hours receive a 10% discount</p>
+      <button type="submit">Calculate Total</button>
+
+      <p id="totalSummary"><strong>Total:</strong> $0.00</p>
+    </form>
   </main>
 </body>
 </html>
-
-
