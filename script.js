@@ -1,30 +1,29 @@
-// script.js
-
-// Toggle collapsible sidebar open/close
+// Toggle collapsible sidebar
 function toggleSidebar() {
   const sidebar = document.getElementById('sidebar');
   sidebar.classList.toggle('collapsed');
 }
 
-// Estimate response time based on topics and apply discount if checked
+// Estimate response time based on number of topics and discount checkbox
 function estimateTime() {
-  const topics = parseInt(document.getElementById("topics").value);
+  const topics = parseInt(document.getElementById("topics").value, 10);
   const discount = document.getElementById("discount").checked;
   const timePerTopic = 2;
 
+  let estimate = 0;
+
   if (!isNaN(topics) && topics > 0) {
-    let estimate = topics * timePerTopic;
+    estimate = topics * timePerTopic;
     if (discount) {
       estimate *= 0.9; // Apply 10% discount
     }
-    document.getElementById("estimate").textContent = estimate.toFixed(1);
-  } else {
-    document.getElementById("estimate").textContent = "0";
   }
+
+  document.getElementById("estimate").textContent = estimate.toFixed(1);
 }
 
-// Smooth scroll for internal links (optional bonus)
-document.addEventListener("DOMContentLoaded", function () {
+// Optional: Smooth scroll for internal anchor links
+document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();
