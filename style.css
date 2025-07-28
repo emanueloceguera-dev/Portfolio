@@ -83,18 +83,22 @@ body {
 .social {
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 15px;
+  margin-top: 1.5rem;
 }
 
 .social img {
-  width: 24px;
-  height: 24px;
+  width: 30px;
+  height: 30px;
   transition: transform 0.3s ease;
+  filter: brightness(0) invert(1);
 }
 
 .social img:hover {
   transform: scale(1.2);
+  filter: drop-shadow(0 0 4px #38bdf8);
 }
+
 
 /* Main Content */
 .content {
