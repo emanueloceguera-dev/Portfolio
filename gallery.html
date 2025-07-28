@@ -4,35 +4,36 @@
   <meta charset="UTF-8">
   <title>Gallery</title>
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-
-<header>
-  <nav class="navbar">
-    <h1>Emanuel Oceguera</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <h2>Gallery</h2>
-
-  <figure>
-    <img src="Self-Portrait.JPG" alt="Self Portrait">
-    <figcaption> Official Portrait USAF </figcaption>
-  </figure>
-
-  <figure>
-    <img src="Family-Portrait.JPG" alt="Family Portrait">
-    <figcaption>The people who inspire me every day</figcaption>
-  </figure>
-</main>
-
+<body class="dark-theme">
+  <aside class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    <img src="Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
+    <h2>Emanuel Oceguera</h2>
+    <p>Software Engineer<br>Rome, NY</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social">
+      <a href="#"><img src="images/github.png" alt="GitHub"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+    </div>
+  </aside>
+  <main class="content">
+    <h2>Image Gallery</h2>
+    <div class="gallery">
+      <img src="images/Family-Portrait.JPG" alt="Family Portrait">
+      <img src="images/Self-Portrait.JPG" alt="Self Portrait">
+      <img src="images/photo3.jpg" alt="Project Snapshot">
+    </div>
+  </main>
 </body>
 </html>
