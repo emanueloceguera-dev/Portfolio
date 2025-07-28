@@ -2,14 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>How-To Video</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How-To Video | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body class="dark-theme">
   <aside class="sidebar" id="sidebar">
     <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
-    <img src="images/Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
+    <img src="images/Self-Portrait.JPG" alt="Profile Picture" class="profile-pic" />
     <h2>Emanuel Oceguera</h2>
     <p>Software Engineer<br>Rome, NY</p>
     <nav>
@@ -28,23 +29,20 @@
     </div>
   </aside>
 
-  <main class="content videos">
-    <h2>How to Embed a YouTube Video</h2>
-    <p>This quick guide shows how to embed a YouTube video into your webpage using HTML.</p>
-    <ol>
-      <li>Go to the YouTube video.</li>
-      <li>Click the Share button and choose <strong>Embed</strong>.</li>
-      <li>Copy the iframe code and paste it into your HTML file.</li>
-    </ol>
-    <img src="images/embed-example.png" alt="Embed Example" style="max-width: 100%; border-radius: 10px; margin: 1rem 0;" />
-    <iframe 
-      src="https://www.youtube.com/embed/Zy7C4XWzAGI" 
-      title="YouTube video player"
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen
-      style="width: 100%; max-width: 700px; height: 400px; border-radius: 10px; display: block; margin: 1rem auto;">
-    </iframe>
+  <main class="content">
+    <section class="videos">
+      <h2>How to Embed a YouTube Video</h2>
+      <p>This quick guide shows how to embed a YouTube video into your webpage using HTML.</p>
+      <ol>
+        <li>Go to the YouTube video.</li>
+        <li>Click the Share button and choose <strong>Embed</strong>.</li>
+        <li>Copy the iframe code and paste it into your HTML file.</li>
+      </ol>
+
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </section>
   </main>
 </body>
 </html>
+
