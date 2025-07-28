@@ -1,56 +1,237 @@
+/* File: index.html */
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuel Oceguera | Software Engineer</title>
   <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
-<body>
+<body class="dark-theme">
+  <aside class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    <img src="Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
+    <h2>Emanuel Oceguera</h2>
+    <p>Software Engineer<br>Rome, NY</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social">
+      <a href="#"><img src="images/github.png" alt="GitHub"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+    </div>
+  </aside>
 
-<header>
-  <nav class="navbar">
-    <h1>Emanuel Oceguera</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <main class="content">
+    <section class="hero">
+      <h1>Hello, I'm Emanuel.</h1>
+      <p>Veteran turned software engineer passionate about building clean, powerful solutions in Python, Java, and web technologies.</p>
+      <a href="contact.html" class="cta">Let's Connect</a>
+    </section>
 
-<main>
-  <h2>Get In Touch / Place an Order</h2>
-
-  <form id="contactForm" onsubmit="event.preventDefault(); estimateTime(); calculateTotal();">
-    <label for="name">Your Name:</label>
-    <input type="text" id="name" required />
-
-    <label for="email">Your Email:</label>
-    <input type="email" id="email" required />
-
-    <label for="message">Your Message:</label>
-    <textarea id="message" rows="4" required></textarea>
-
-    <label for="topics">How many topics do you want to discuss?</label>
-    <input type="number" id="topics" min="1" placeholder="e.g., 3" required />
-    <p><strong>Estimated Time to Respond:</strong> <span id="estimate">0</span> minutes</p>
-
-    <hr />
-
-    <label for="quantity">Quantity of Services (e.g., consulting hours):</label>
-    <input type="number" id="quantity" min="1" placeholder="e.g., 6" required />
-
-    <p><strong>Each service costs: $20</strong></p>
-    <button type="submit">Calculate Total</button>
-
-    <p id="totalSummary"><strong>Total:</strong> $0.00</p>
-  </form>
-</main>
-
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I'm a U.S. Air Force veteran and passionate software developer with a background in aviation maintenance, leadership, and technical project execution. Currently finishing my Bachelor's in Computer Science, I'm deeply engaged in transitioning to full-time tech roles. My goal is to build applications that serve real people and solve real problems.</p>
+    </section>
+  </main>
 </body>
 </html>
+
+/* File: style.css */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  transition: background 0.4s ease;
+}
+
+.sidebar {
+  background-color: #111;
+  padding: 2rem;
+  width: 250px;
+  min-height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: width 0.3s ease;
+}
+
+.sidebar.collapsed {
+  width: 70px;
+  overflow: hidden;
+}
+
+.toggle-btn {
+  position: absolute;
+  top: 15px;
+  right: -15px;
+  background-color: #00bcd4;
+  color: #111;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 1rem auto;
+  border: 3px solid #00bcd4;
+  transition: transform 0.3s;
+}
+
+.profile-pic:hover {
+  transform: scale(1.05);
+}
+
+.sidebar h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.2rem;
+  transition: opacity 0.3s ease;
+}
+
+.sidebar.collapsed h2,
+.sidebar.collapsed p,
+.sidebar.collapsed nav,
+.sidebar.collapsed .social {
+  display: none;
+}
+
+.sidebar p {
+  font-size: 0.9rem;
+  color: #bbb;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.sidebar li {
+  margin: 1rem 0;
+  transition: transform 0.2s ease;
+}
+
+.sidebar li:hover {
+  transform: scale(1.1);
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #00bcd4;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.sidebar a:hover {
+  color: #26d7f4;
+}
+
+.sidebar .social img {
+  width: 24px;
+  margin: 0.5rem;
+  filter: brightness(0) invert(1);
+  transition: transform 0.2s ease;
+}
+
+.sidebar .social img:hover {
+  transform: scale(1.2);
+}
+
+.content {
+  flex: 1;
+  padding: 3rem;
+  transition: margin 0.3s ease;
+}
+
+.hero {
+  background: rgba(255,255,255,0.05);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero .cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.8rem 1.5rem;
+  background: #00bcd4;
+  color: #111;
+  border-radius: 24px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.hero .cta:hover {
+  background: #26d7f4;
+  transform: scale(1.05);
+}
+
+.about h2 {
+  border-bottom: 2px solid #00bcd4;
+  padding-bottom: 0.5rem;
+}
+
+.about p {
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* File: script.js */
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("collapsed");
+}
+
+function estimateTime() {
+  const topics = parseInt(document.getElementById("topics")?.value);
+  const timePerTopic = 2;
+  const estimate = (!isNaN(topics) && topics > 0) ? topics * timePerTopic : 0;
+  const output = document.getElementById("estimate");
+  if (output) output.textContent = estimate;
+}
+
+function calculateTotal() {
+  const price = 20;
+  const quantity = parseInt(document.getElementById("quantity")?.value);
+  let total = price * quantity;
+  let discount = 0;
+
+  if (!isNaN(quantity) && quantity >= 5) {
+    discount = total * 0.10;
+    total -= discount;
+  }
+
+  const totalEl = document.getElementById("totalSummary");
+  if (totalEl) {
+    totalEl.innerHTML = `
+      <strong>Total:</strong> $${total.toFixed(2)}<br>
+      <strong>Discount:</strong> $${discount.toFixed(2)}
+    `;
+  }
+}
 
 
