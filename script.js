@@ -22,6 +22,24 @@ function estimateTime() {
   document.getElementById("estimate").textContent = estimate.toFixed(1);
 }
 
+// Calculate total cost of consulting hours
+function calculateTotal() {
+  const quantity = parseInt(document.getElementById("quantity").value, 10);
+  const discount = document.getElementById("discount").checked;
+  const rate = 20;
+
+  let total = 0;
+
+  if (!isNaN(quantity) && quantity > 0) {
+    total = quantity * rate;
+    if (discount) {
+      total *= 0.9; // Apply 10% discount
+    }
+  }
+
+  document.getElementById("totalSummary").innerHTML = `<strong>Total:</strong> $${total.toFixed(2)}`;
+}
+
 // Smooth scroll for internal anchor links
 document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
