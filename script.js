@@ -1,23 +1,31 @@
+function toggleSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.toggle("collapsed");
+}
+
 function estimateTime() {
-  const topics = parseInt(document.getElementById("topics").value);
-  const timePerTopic = 2;
-  const estimate = (!isNaN(topics) && topics > 0) ? topics * timePerTopic : 0;
-  document.getElementById("estimate").textContent = estimate;
+  const topics = parseInt(document.getElementById("topics")?.value);
+  const estimate = (!isNaN(topics) && topics > 0) ? topics * 2 : 0;
+  const output = document.getElementById("estimate");
+  if (output) output.textContent = estimate;
 }
 
 function calculateTotal() {
   const price = 20;
-  const quantity = parseInt(document.getElementById("quantity").value);
+  const quantity = parseInt(document.getElementById("quantity")?.value);
   let total = price * quantity;
   let discount = 0;
 
   if (!isNaN(quantity) && quantity >= 5) {
-    discount = total * 0.10; // 10% discount
+    discount = total * 0.10;
     total -= discount;
   }
 
-  document.getElementById("totalSummary").innerHTML = `
-    <strong>Total:</strong> $${total.toFixed(2)}<br>
-    <strong>Discount:</strong> $${discount.toFixed(2)}
-  `;
+  const totalEl = document.getElementById("totalSummary");
+  if (totalEl) {
+    totalEl.innerHTML = `
+      <strong>Total:</strong> $${total.toFixed(2)}<br>
+      <strong>Discount:</strong> $${discount.toFixed(2)}
+    `;
+  }
 }
