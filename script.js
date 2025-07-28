@@ -1,31 +1,37 @@
+// script.js
+
+// Toggle collapsible sidebar open/close
 function toggleSidebar() {
-  const sidebar = document.getElementById("sidebar");
-  sidebar.classList.toggle("collapsed");
+  const sidebar = document.getElementById('sidebar');
+  sidebar.classList.toggle('collapsed');
 }
 
+// Estimate response time based on topics and apply discount if checked
 function estimateTime() {
-  const topics = parseInt(document.getElementById("topics")?.value);
-  const estimate = (!isNaN(topics) && topics > 0) ? topics * 2 : 0;
-  const output = document.getElementById("estimate");
-  if (output) output.textContent = estimate;
-}
+  const topics = parseInt(document.getElementById("topics").value);
+  const discount = document.getElementById("discount").checked;
+  const timePerTopic = 2;
 
-function calculateTotal() {
-  const price = 20;
-  const quantity = parseInt(document.getElementById("quantity")?.value);
-  let total = price * quantity;
-  let discount = 0;
-
-  if (!isNaN(quantity) && quantity >= 5) {
-    discount = total * 0.10;
-    total -= discount;
-  }
-
-  const totalEl = document.getElementById("totalSummary");
-  if (totalEl) {
-    totalEl.innerHTML = `
-      <strong>Total:</strong> $${total.toFixed(2)}<br>
-      <strong>Discount:</strong> $${discount.toFixed(2)}
-    `;
+  if (!isNaN(topics) && topics > 0) {
+    let estimate = topics * timePerTopic;
+    if (discount) {
+      estimate *= 0.9; // Apply 10% discount
+    }
+    document.getElementById("estimate").textContent = estimate.toFixed(1);
+  } else {
+    document.getElementById("estimate").textContent = "0";
   }
 }
+
+// Smooth scroll for internal links (optional bonus)
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener("click", function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute("href"));
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+});
