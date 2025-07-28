@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Home - Emanuel Oceguera</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emanuel Oceguera | Software Engineer</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
-<body>
-
-<header>
-  <nav class="navbar">
-    <h1>Emanuel Oceguera</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <h2>About Me</h2>
-
-  <div class="portrait-container">
-    <img src="Self-Portrait.JPG" alt="Emanuel Oceguera Portrait">
-  </div>
-
-  <p>Hello, I’m Emanuel Oceguera — a proud U.S. Air Force veteran and a passionate tech enthusiast transitioning into the world of software engineering. Over the past six years, I’ve built my career in aviation maintenance, leading teams, solving real-world problems, and managing critical systems with precision and reliability. Now, I’m bringing that same discipline and attention to detail into the world of code, cloud infrastructure, and cybersecurity.</p>
-
-  <p>I’m currently completing my Bachelor's in Computer Science, and I’ve already gained hands-on experience in Python, Java, SQL, and web development. Whether it's writing clean code, building dynamic user interfaces, or learning new frameworks, I find joy in the process of creating and improving technology that makes life easier and more secure.</p>
-
-  <p>This portfolio is a reflection of who I am — a driven learner, a team player, and someone who’s always pushing to grow. Here, you’ll find a collection of my projects, inspirations, and interests as I prepare for the next chapter of my career in tech. If you’re interested in collaborating, mentoring, or just connecting, feel free to reach out via the Contact page. I'm always open to building new relationships and learning
-
-
+<body class="dark-theme">
+  <aside class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    <img src="Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
+    <h2>Emanuel Oceguera</h2>
+    <p>Software Engineer<br>Rome, NY</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social">
+      <a href="#"><img src="images/github.png" alt="GitHub"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+    </div>
+  </aside>
+  <main class="content">
+    <section class="hero">
+      <h1>Hello, I'm Emanuel.</h1>
+      <p>Veteran turned software engineer passionate about building clean, powerful solutions in Python, Java, and web technologies.</p>
+      <a href="contact.html" class="cta">Let's Connect</a>
+    </section>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>I’m a U.S. Air Force veteran and a Computer Science student. I have over 6 years of experience leading maintenance teams, and now I’m applying my leadership and problem-solving skills to the world of software development. This site showcases my progress, learning, and interests in tech.</p>
+    </section>
+  </main>
 </body>
 </html>
-
-
