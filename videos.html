@@ -1,51 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>How-To: Embed a YouTube Video</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>How-To Video</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
-
-<header>
-  <nav class="navbar">
-    <h1>Emanuel Oceguera</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="videos.html">How-To</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="form.html">Order Form</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section>
+<body class="dark-theme">
+  <aside class="sidebar" id="sidebar">
+    <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
+    <img src="Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
+    <h2>Emanuel Oceguera</h2>
+    <p>Software Engineer<br>Rome, NY</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="videos.html">Videos</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="social">
+      <a href="#"><img src="images/github.png" alt="GitHub"></a>
+      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
+      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+    </div>
+  </aside>
+  <main class="content">
     <h2>How to Embed a YouTube Video</h2>
     <p>This quick guide shows how to embed a YouTube video into your webpage using HTML.</p>
-
-    <h3>Steps:</h3>
     <ol>
-      <li>Go to the video on YouTube.</li>
-      <li>Click the “Share” button and select “Embed.”</li>
-      <li>Copy the iframe code provided.</li>
-      <li>Paste the code into your HTML file where you want the video to appear.</li>
+      <li>Go to the YouTube video.</li>
+      <li>Click the Share button and choose Embed.</li>
+      <li>Copy the iframe code and paste it in your HTML.</li>
     </ol>
-
-    <img src="Self-Portrait.JPG" alt="Embed screenshot example" style="max-width: 300px; border: 1px solid #ccc; border-radius: 4px; margin-bottom: 1rem;" />
-
-    <h3>Example Embedded Video:</h3>
-    <iframe width="560" height="315"
-      src="https://www.youtube.com/embed/Zy7C4XWzAGI"
-      title="Professor Messer Security+ Training"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </section>
-</main>
-
+    <img src="images/embed-example.png" alt="Embed Example" style="max-width: 300px;">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zy7C4XWzAGI" frameborder="0" allowfullscreen></iframe>
+  </main>
 </body>
 </html>
