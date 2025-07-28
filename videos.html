@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>How-To Video</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
   <script src="script.js" defer></script>
 </head>
 <body class="dark-theme">
   <aside class="sidebar" id="sidebar">
     <div class="toggle-btn" onclick="toggleSidebar()">☰</div>
-<img src="Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" style="width: 120px; height: 120px; border-radius: 50%; display: block; margin: 1rem auto;" />
+    <img src="images/Self-Portrait.JPG" alt="Emanuel Oceguera" class="profile-pic" />
     <h2>Emanuel Oceguera</h2>
     <p>Software Engineer<br>Rome, NY</p>
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
         <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="videos.html" class="active">Videos</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
     <div class="social">
-      <a href="#"><img src="images/github.png" alt="GitHub"></a>
-      <a href="#"><img src="images/linkedin.png" alt="LinkedIn"></a>
-      <a href="mailto:emanuel@example.com"><img src="images/email.png" alt="Email"></a>
+      <a href="https://github.com/emanueloceguera-dev" target="_blank"><img src="images/github.png" alt="GitHub" /></a>
+      <a href="https://www.linkedin.com/in/emanuel-oceguera/" target="_blank"><img src="images/linkedin.png" alt="LinkedIn" /></a>
+      <a href="mailto:eoceguera5@gmail.com"><img src="images/email.png" alt="Email" /></a>
     </div>
   </aside>
-  <main class="content">
+
+  <main class="content videos">
     <h2>How to Embed a YouTube Video</h2>
     <p>This quick guide shows how to embed a YouTube video into your webpage using HTML.</p>
     <ol>
       <li>Go to the YouTube video.</li>
-      <li>Click the Share button and choose Embed.</li>
-      <li>Copy the iframe code and paste it in your HTML.</li>
+      <li>Click the Share button and choose <strong>Embed</strong>.</li>
+      <li>Copy the iframe code and paste it into your HTML file.</li>
     </ol>
-    <img src="images/embed-example.png" alt="Embed Example" style="max-width: 300px;">
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/Zy7C4XWzAGI" frameborder="0" allowfullscreen></iframe>
+    <img src="images/embed-example.png" alt="Embed Example" style="max-width: 100%; border-radius: 10px; margin: 1rem 0;" />
+    <iframe 
+      src="https://www.youtube.com/embed/Zy7C4XWzAGI" 
+      title="YouTube video player"
+      frameborder="0" 
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+      allowfullscreen
+      style="width: 100%; max-width: 700px; height: 400px; border-radius: 10px; display: block; margin: 1rem auto;">
+    </iframe>
   </main>
 </body>
 </html>
