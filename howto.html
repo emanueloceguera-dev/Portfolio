@@ -5,49 +5,39 @@
   <title>How-To | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
-  <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
-  <div class="sidebar">
-    <a href="index.html">Home</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="howto.html">How-To</a>
-    <a href="resources.html">Resources</a>
-    <a href="form.html">Contact</a>
-  </div>
-  <header>
-    <h1>How-To Guide</h1>
-  </header>
+  <aside class="sidebar">
+    <h2 class="logo">Emanuel</h2>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="howto.html" class="active">How-To</a>
+      <a href="resources.html">Resources</a>
+      <a href="form.html">Contact</a>
+    </nav>
+  </aside>
 
   <main>
-    <section>
-      <h2>How I Transitioned from Military to Tech</h2>
-      <p>In this video, I explain the steps I took to go from active duty to interning at Northrop Grumman as a software engineer.</p>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
-    </section>
+    <header class="page-header">
+      <h1>How-To: Embed a YouTube Video</h1>
+    </header>
 
-    <section class="photos">
-      <img src="images/Family.JPG" alt="Emanuel with family" />
-      <img src="images/Profile.JPG" alt="Emanuel in uniform" />
-      <img src="images/girl_dad.jpg" alt="Emanuel walking with daughter" />
-    </section>
+    <section class="content-section">
+      <p>This quick tutorial shows how to embed a YouTube video in your website using simple HTML. This is a great way to add multimedia content and enhance user engagement.</p>
 
-    <section class="links">
-      <h3>Favorite Sites</h3>
-      <ul>
-       <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://https://store.steampowered.com/.org" target="_blank">Steam (Video Games) </a></li>
-      </ul>
+      <div class="video-wrapper">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/BIbYAcFbXk8"
+          title="How to Embed a YouTube Video in HTML"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </div>
     </section>
   </main>
 
-  <footer>&copy; 2025 Emanuel Oceguera</footer>
-</body>
-</html>
-
-
-  <footer>&copy; 2025 Emanuel Oceguera</footer>
+  <footer>
+    &copy; 2025 Emanuel Oceguera
+  </footer>
 </body>
 </html>
