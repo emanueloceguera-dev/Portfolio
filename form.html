@@ -2,30 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Contact Request</title>
+  <title>Contact | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 </head>
 <body>
+  <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
+  <div class="sidebar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="howto.html">How-To</a>
+    <a href="resources.html">Resources</a>
+    <a href="form.html">Contact</a>
+  </div>
   <header>
     <h1>Contact Request</h1>
-    <div class="nav-toggle" onclick="toggleNav()">☰</div>
-    <nav class="nav-links" id="navLinks">
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="howto.html">How-To</a>
-      <a href="resources.html">Resources</a>
-      <a href="form.html">Contact</a>
-    </nav>
   </header>
 
   <main>
     <section>
       <p>Please use the form below to request a quote or reach out for mentorship, collaboration, or project inquiries. I’ll respond as soon as possible.</p>
-
-      <!-- Jotform Embed Code -->
       <script type="text/javascript" src="https://form.jotform.com/jsform/252147634672056"></script>
+    </section>
+
+    <section class="photos">
+      <img src="images/Family.JPG" alt="Emanuel with family" />
+      <img src="images/Profile.JPG" alt="Emanuel in uniform" />
+      <img src="images/girl_dad.jpg" alt="Emanuel walking with daughter" />
+    </section>
+
+    <section class="links">
+      <h3>Favorite Sites</h3>
+      <ul>
+        <li><a href="https://github.com" target="_blank">GitHub</a></li>
+        <li><a href="https://www.airforce.com" target="_blank">U.S. Air Force</a></li>
+        <li><a href="https://developer.mozilla.org" target="_blank">MDN Web Docs</a></li>
+      </ul>
     </section>
   </main>
 
