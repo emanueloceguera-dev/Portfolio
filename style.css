@@ -22,35 +22,48 @@ header h1 {
 }
 
 /* Hamburger menu (hidden on desktop) */
-.nav-toggle {
-  display: none;
-  font-size: 1.5rem;
-  position: absolute;
-  top: 1.2rem;
-  right: 1rem;
-  cursor: pointer;
-}
-
-/* Navigation links container */
-nav {
+/* Add to existing .nav-links */
+.nav-links {
   display: flex;
+  flex-direction: row;
   justify-content: center;
-  gap: 15px;
-  flex-wrap: wrap;
-  margin-top: 0.5em;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  overflow: hidden;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  padding: 0.5em 1em;
-  transition: background-color 0.3s;
+@media (max-width: 768px) {
+  .nav-links {
+    max-height: 0;
+    opacity: 0;
+    flex-direction: column;
+    background-color: #1e2a38;
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+
+  .nav-links.show {
+    max-height: 500px;
+    opacity: 1;
+  }
+
+  .nav-links a {
+    padding: 1em;
+  }
 }
 
-nav a:hover {
-  background-color: #35495e;
-  border-radius: 5px;
+/* Form output animation */
+#output {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
 }
+
+#output.show {
+  opacity: 1;
+}
+
 
 /* Mobile Menu: hidden by default */
 .nav-links {
