@@ -1,16 +1,18 @@
-function toggleNav() {
-  const nav = document.getElementById("navLinks");
-  nav.classList.toggle("show");
+function toggleSidebar() {
+  const sidebar = document.querySelector(".sidebar");
+  sidebar.classList.toggle("show");
+
+  // shift main content too
+  document.body.classList.toggle("sidebar-open");
 }
 
+// Collapse sidebar after clicking a link (on mobile)
 document.addEventListener("DOMContentLoaded", () => {
-  const navLinks = document.querySelectorAll("#navLinks a");
+  const navLinks = document.querySelectorAll(".sidebar a");
   navLinks.forEach(link => {
     link.addEventListener("click", () => {
-      const nav = document.getElementById("navLinks");
-      if (nav.classList.contains("show")) {
-        nav.classList.remove("show");
-      }
+      document.querySelector(".sidebar").classList.remove("show");
+      document.body.classList.remove("sidebar-open");
     });
   });
 });
