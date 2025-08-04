@@ -106,18 +106,27 @@ footer {
   transition: transform 0.2s ease;
 }
 
-.social-icons img:hover {
+.social-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.social-icon:hover {
   transform: scale(1.1);
 }
 
-/* Links */
-a {
-  color: #356859;
+/* LinkedIn brand color (filter approximation) */
+.linkedin-icon {
+  filter: brightness(0) saturate(100%) invert(41%) sepia(80%) saturate(490%) hue-rotate(175deg) brightness(91%) contrast(93%);
 }
 
-a:hover {
-  text-decoration: underline;
+/* GitHub brand color (black) */
+.github-icon {
+  filter: brightness(0) saturate(100%);
 }
+
 
 /* Responsive Sidebar */
 @media (max-width: 768px) {
