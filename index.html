@@ -12,9 +12,57 @@
       body.classList.toggle('sidebar-open');
     }
   </script>
+  <style>
+    .content-container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .content-container h2 {
+      text-align: center;
+      color: #2c6b58;
+    }
+
+    .content-container p {
+      margin-top: 1rem;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    .content-container ul {
+      margin-top: 1rem;
+      text-align: center;
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .content-container ul li {
+      margin: 5px 0;
+    }
+
+    .icon-links {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 30px;
+      gap: 20px;
+    }
+
+    .icon-links img {
+      width: 32px;
+      height: 32px;
+      filter: brightness(0) invert(1); /* darken icons for visibility */
+      transition: transform 0.2s ease;
+    }
+
+    .icon-links img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-  <!-- Sidebar Toggle -->
+  <!-- Sidebar Button -->
   <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
 
   <!-- Sidebar Navigation -->
@@ -27,42 +75,37 @@
     <a href="form.html">Contact</a>
   </div>
 
-  <!-- Page Content -->
-  <main>
-    <header>
-      <h1>Welcome to My Portfolio</h1>
-    </header>
+  <!-- Main Content -->
+  <main class="content-container">
+    <h2>Welcome to My Portfolio</h2>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
-        I'm a proud United States Air Force veteran, family man, and software engineer.
-        After six years of active duty in aviation maintenance, I transitioned into tech to continue serving with impact, this time through innovation and software engineering.
-      </p>
-      <p>
-        I value family, service, and growth. I’m currently wrapping up my Bachelor’s in Computer Science while interning at Northrop Grumman. This website showcases my journey, skills, and hobbies. Thanks for visiting!
-      </p>
-    </section>
+    <h2>About Me</h2>
+    <p>
+      I'm a proud United States Air Force veteran, family man, and software engineer. After six years of active duty in aviation maintenance,
+      I transitioned into tech to continue serving with impact — this time through innovation and software engineering.
+    </p>
+    <p>
+      I value family, service, and growth. I'm currently wrapping up my Bachelor’s in Computer Science while interning at Northrop Grumman.
+      This website showcases my journey, skills, and hobbies. Thanks for visiting!
+    </p>
 
-    <section>
-      <h3>Favorite Sites</h3>
-      <ul>
-        <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://store.steampowered.com/" target="_blank">Steam (Video Games)</a></li>
-      </ul>
+    <h2>Favorite Sites</h2>
+    <ul>
+      <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
+      <li><a href="https://www.google.com" target="_blank">Google</a></li>
+      <li><a href="https://store.steampowered.com/" target="_blank">Steam (Video Games)</a></li>
+    </ul>
 
-      <div class="social-icons">
-        <a href="https://www.linkedin.com/in/emanueloceguera/" target="_blank">
-          <img src="images/linkedin.png" alt="LinkedIn" />
-        </a>
-        <a href="https://github.com/emanueloceguera-dev" target="_blank">
-          <img src="images/github.png" alt="GitHub" />
-        </a>
-      </div>
-    </section>
-
-    <footer>&copy; 2025 Emanuel Oceguera</footer>
+    <div class="icon-links">
+      <a href="https://www.linkedin.com/in/emanuel-oceguera/" target="_blank">
+        <img src="images/linkedin.png" alt="LinkedIn" />
+      </a>
+      <a href="https://github.com/emanueloceguera-dev" target="_blank">
+        <img src="images/github.png" alt="GitHub" />
+      </a>
+    </div>
   </main>
+
+  <footer>&copy; 2025 Emanuel Oceguera</footer>
 </body>
 </html>
