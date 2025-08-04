@@ -49,15 +49,22 @@
       gap: 20px;
     }
 
-    .icon-links img {
-      width: 32px;
-      height: 32px;
-      filter: brightness(0) invert(1); /* darken icons for visibility */
-      transition: transform 0.2s ease;
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.2s ease-in-out;
     }
 
-    .icon-links img:hover {
+    .social-icon:hover {
       transform: scale(1.1);
+    }
+
+    .linkedin-icon {
+      filter: brightness(0) saturate(100%) invert(41%) sepia(80%) saturate(490%) hue-rotate(175deg) brightness(91%) contrast(93%);
+    }
+
+    .github-icon {
+      filter: brightness(0) saturate(100%);
     }
   </style>
 </head>
@@ -98,10 +105,10 @@
 
     <div class="icon-links">
       <a href="https://www.linkedin.com/in/emanuel-oceguera/" target="_blank">
-        <img src="images/linkedin.png" alt="LinkedIn" />
+        <img src="images/linkedin.png" alt="LinkedIn" class="social-icon linkedin-icon" />
       </a>
       <a href="https://github.com/emanueloceguera-dev" target="_blank">
-        <img src="images/github.png" alt="GitHub" />
+        <img src="images/github.png" alt="GitHub" class="social-icon github-icon" />
       </a>
     </div>
   </main>
