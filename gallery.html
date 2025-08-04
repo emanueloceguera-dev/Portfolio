@@ -4,42 +4,74 @@
   <meta charset="UTF-8" />
   <title>Gallery | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script defer>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const body = document.body;
+      sidebar.classList.toggle('show');
+      body.classList.toggle('sidebar-open');
+    }
+  </script>
+  <style>
+    .gallery-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    .gallery-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      transition: transform 0.2s ease-in-out;
+    }
+
+    .gallery-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-size: 1.8rem;
+      margin-top: 1rem;
+      color: #1e2a38;
+    }
+  </style>
 </head>
 <body>
+  <!-- Sidebar Toggle -->
   <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
-  <div class="sidebar">
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <h1>Navigation</h1>
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="howto.html">How-To</a>
     <a href="resources.html">Resources</a>
     <a href="form.html">Contact</a>
   </div>
-  <header>
-    <h1>Gallery</h1>
-  </header>
 
+  <!-- Page Content -->
   <main>
-    <section><p>Here are some meaningful images that reflect my journey in service and the most important thing in my life, family.</p></section>
+    <header>
+      <h1>Gallery</h1>
+    </header>
 
-    <section class="photos">
-      <img src="images/Family.JPG" alt="Emanuel with family" />
-      <img src="images/Profile.JPG" alt="Emanuel in uniform" />
-      <img src="images/girl_dad.jpg" alt="Emanuel walking with daughter" />
+    <section>
+      <p class="gallery-title">A Glimpse Into My Life and Journey</p>
+      <div class="gallery-container">
+        <img src="images/Profile.JPG" alt="Profile Image" />
+        <img src="images/GirlDad.JPG" alt="Girl Dad Moment" />
+        <img src="images/Family.JPG" alt="Family Photo" />
+      </div>
     </section>
 
-
-    <section class="links">
-      <h3>Favorite Sites</h3>
-      <ul>
-        <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://https://store.steampowered.com/.org" target="_blank">Steam (Video Games) </a></li>
-      </ul>
-    </section>
+    <footer>&copy; 2025 Emanuel Oceguera</footer>
   </main>
-
-  <footer>&copy; 2025 Emanuel Oceguera</footer>
 </body>
 </html>
+
