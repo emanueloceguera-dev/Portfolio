@@ -13,29 +13,32 @@
     }
   </script>
   <style>
-    .video-wrapper {
-      display: flex;
-      justify-content: center;
-      margin-top: 20px;
-    }
-
-    iframe {
-      max-width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .howto-section {
-      padding: 1rem;
+    .howto-container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
       text-align: center;
     }
 
-    .howto-section p {
-      max-width: 700px;
-      margin: auto;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      line-height: 1.6;
+    .howto-container h2 {
+      background-color: #2c6b58;
+      color: #fff;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+
+    .howto-container p {
+      margin: 1rem 0 2rem;
+      color: #333;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 600px;
+      height: 350px;
+      border-radius: 10px;
+      border: none;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
@@ -55,24 +58,13 @@
 
   <!-- Page Content -->
   <main>
-    <header>
-      <h1>How-To: Embed a YouTube Video</h1>
-    </header>
-
-    <section class="howto-section">
+    <section class="howto-container">
+      <h2>How-To: Embed a YouTube Video</h2>
       <p>
-        Learn how to embed a YouTube video into your website using a simple iframe tag. It’s one of the most efficient ways to add multimedia content without needing to upload large files.
+        Learn how to embed a YouTube video into your website using a simple iframe tag.
+        It’s one of the most efficient ways to add multimedia content without uploading large files.
       </p>
-
-      <div class="video-wrapper">
-        <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/BIbYAcFbXk8"
-          title="How to Embed a YouTube Video in HTML"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
-      </div>
+      <iframe src="https://www.youtube.com/embed/n-BB3Nv9n5o" allowfullscreen></iframe>
     </section>
 
     <footer>&copy; 2025 Emanuel Oceguera</footer>
