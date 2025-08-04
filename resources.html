@@ -4,48 +4,82 @@
   <meta charset="UTF-8" />
   <title>Resources | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script defer>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const body = document.body;
+      sidebar.classList.toggle('show');
+      body.classList.toggle('sidebar-open');
+    }
+  </script>
+  <style>
+    .resources-section {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    .resources-section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .resources-section ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+
+    .resources-section li {
+      background: #e6f4e6;
+      padding: 12px 16px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .resources-section a {
+      text-decoration: none;
+      color: #1e2a38;
+      font-weight: bold;
+    }
+
+    .resources-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+  <!-- Sidebar Toggle -->
   <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
-  <div class="sidebar">
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <h1>Navigation</h1>
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="howto.html">How-To</a>
     <a href="resources.html">Resources</a>
     <a href="form.html">Contact</a>
   </div>
-  <header>
-    <h1>Resources</h1>
-  </header>
 
+  <!-- Page Content -->
   <main>
-    <section>
-      <h2>Helpful Links</h2>
+    <header>
+      <h1>Helpful Resources</h1>
+    </header>
+
+    <section class="resources-section">
+      <h2>Recommended Tools & Learning Sites</h2>
       <ul>
-        <li><a href="https://www.linkedin.com" target="_blank">LinkedIn</a></li>
-        <li><a href="https://leetcode.com" target="_blank">LeetCode</a></li>
-        <li><a href="https://roadmap.sh" target="_blank">Developer Roadmaps</a></li>
+        <li><a href="https://github.com" target="_blank">GitHub</a> – Host and collaborate on code</li>
+        <li><a href="https://developer.mozilla.org/en-US/" target="_blank">MDN Web Docs</a> – In-depth web development documentation</li>
+        <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a> – Learn HTML, CSS, JavaScript, and more</li>
+        <li><a href="https://www.linkedin.com/learning/" target="_blank">LinkedIn Learning</a> – Professional tech and business courses</li>
+        <li><a href="https://stackoverflow.com/" target="_blank">Stack Overflow</a> – Ask and answer coding questions</li>
       </ul>
     </section>
 
-    <section class="photos">
-      <img src="images/Family.JPG" alt="Emanuel with family" />
-      <img src="images/Profile.JPG" alt="Emanuel in uniform" />
-      <img src="images/girl_dad.jpg" alt="Emanuel walking with daughter" />
-    </section>
-
-    <section class="links">
-      <h3>Favorite Sites</h3>
-      <ul>
-           <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
-        <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://https://store.steampowered.com/.org" target="_blank">Steam (Video Games) </a></li>
-      </ul>
-    </section>
+    <footer>&copy; 2025 Emanuel Oceguera</footer>
   </main>
-
-  <footer>&copy; 2025 Emanuel Oceguera</footer>
 </body>
 </html>
