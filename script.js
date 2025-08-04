@@ -1,3 +1,8 @@
+function toggleNav() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("show");
+}
+
 function calculateTotal() {
   const price = parseFloat(document.getElementById("product").value);
   const quantity = parseInt(document.getElementById("quantity").value);
