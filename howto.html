@@ -4,40 +4,78 @@
   <meta charset="UTF-8" />
   <title>How-To | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <script defer>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const body = document.body;
+      sidebar.classList.toggle('show');
+      body.classList.toggle('sidebar-open');
+    }
+  </script>
+  <style>
+    .video-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    iframe {
+      max-width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .howto-section {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .howto-section p {
+      max-width: 700px;
+      margin: auto;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 <body>
-  <aside class="sidebar">
-    <h2 class="logo">Emanuel</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="howto.html" class="active">How-To</a>
-      <a href="resources.html">Resources</a>
-      <a href="form.html">Contact</a>
-    </nav>
-  </aside>
+  <!-- Sidebar Toggle -->
+  <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
 
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <h1>Navigation</h1>
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="howto.html">How-To</a>
+    <a href="resources.html">Resources</a>
+    <a href="form.html">Contact</a>
+  </div>
+
+  <!-- Page Content -->
   <main>
-    <header class="page-header">
+    <header>
       <h1>How-To: Embed a YouTube Video</h1>
     </header>
 
-    <section class="content-section">
-      <p>This quick tutorial shows how to embed a YouTube video in your website using simple HTML. This is a great way to add multimedia content and enhance user engagement.</p>
+    <section class="howto-section">
+      <p>
+        Learn how to embed a YouTube video into your website using a simple iframe tag. It’s one of the most efficient ways to add multimedia content without needing to upload large files.
+      </p>
 
       <div class="video-wrapper">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/BIbYAcFbXk8"
+        <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/BIbYAcFbXk8"
           title="How to Embed a YouTube Video in HTML"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen>
+        </iframe>
       </div>
     </section>
-  </main>
 
-  <footer>
-    &copy; 2025 Emanuel Oceguera
-  </footer>
+    <footer>&copy; 2025 Emanuel Oceguera</footer>
+  </main>
 </body>
 </html>
