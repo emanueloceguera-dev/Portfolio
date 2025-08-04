@@ -4,41 +4,65 @@
   <meta charset="UTF-8" />
   <title>Welcome | Emanuel Oceguera</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script defer>
+    function toggleSidebar() {
+      const sidebar = document.querySelector('.sidebar');
+      const body = document.body;
+      sidebar.classList.toggle('show');
+      body.classList.toggle('sidebar-open');
+    }
+  </script>
 </head>
 <body>
+  <!-- Sidebar Toggle -->
   <div class="nav-toggle" onclick="toggleSidebar()">☰</div>
-  <div class="sidebar">
+
+  <!-- Sidebar Navigation -->
+  <div class="sidebar" id="sidebar">
+    <h1>Navigation</h1>
     <a href="index.html">Home</a>
     <a href="gallery.html">Gallery</a>
     <a href="howto.html">How-To</a>
     <a href="resources.html">Resources</a>
     <a href="form.html">Contact</a>
   </div>
-  <header>
-    <h1>Welcome to My Portfolio</h1>
-  </header>
 
+  <!-- Page Content -->
   <main>
-    <section class="intro">
+    <header>
+      <h1>Welcome to My Portfolio</h1>
+    </header>
+
+    <section>
       <h2>About Me</h2>
-      <p>I’m a proud United States Air Force veteran, family man, and software engineer. After six years of active duty in aviation maintenance, I transitioned into tech to continue serving with impact — this time through innovation and code.</p>
-      <p>I value family, service, and growth. I’m currently wrapping up my Bachelor’s in Computer Science while interning at Northrop Grumman. This website showcases my journey, skills, and hobbies. Thanks for visiting!</p>
+      <p>
+        I'm a proud United States Air Force veteran, family man, and software engineer.
+        After six years of active duty in aviation maintenance, I transitioned into tech to continue serving with impact, this time through innovation and software engineering.
+      </p>
+      <p>
+        I value family, service, and growth. I’m currently wrapping up my Bachelor’s in Computer Science while interning at Northrop Grumman. This website showcases my journey, skills, and hobbies. Thanks for visiting!
+      </p>
     </section>
 
-   
-    <section class="links">
+    <section>
       <h3>Favorite Sites</h3>
       <ul>
-        <li><a href="https://youtube.com" target="_blank">Youtube</a></li>
+        <li><a href="https://youtube.com" target="_blank">YouTube</a></li>
         <li><a href="https://www.google.com" target="_blank">Google</a></li>
-        <li><a href="https://https://store.steampowered.com/.org" target="_blank">Steam (Video Games) </a></li>
+        <li><a href="https://store.steampowered.com/" target="_blank">Steam (Video Games)</a></li>
       </ul>
-    </section>
-  </main>
 
-  <footer>&copy; 2025 Emanuel Oceguera</footer>
+      <div class="social-icons">
+        <a href="https://www.linkedin.com/in/emanueloceguera/" target="_blank">
+          <img src="images/linkedin.png" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com/emanueloceguera-dev" target="_blank">
+          <img src="images/github.png" alt="GitHub" />
+        </a>
+      </div>
+    </section>
+
+    <footer>&copy; 2025 Emanuel Oceguera</footer>
+  </main>
 </body>
 </html>
-
